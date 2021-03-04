@@ -29,8 +29,8 @@ resource "aws_iam_group_policy" "read_athena_data_buckets" {
         "s3:List*"
       ],
       "Resource": [
-        "arn:aws:s3:::douglasnaphasalbcreate-a-albaccesslogbucket9abe2c-10x8rlu9ujiaq",
-        "arn:aws:s3:::passover-lol-alb-access-logs-bucket-2"
+        "arn:aws:s3:::douglasnaphasalbcreate-a-albaccesslogbucket9abe2c-10x8rlu9ujiaq*",
+        "arn:aws:s3:::passover-lol-alb-access-logs-bucket-2*"
       ]
     }
   ]
