@@ -3,5 +3,5 @@ module "athena-users-group" {
 }
 
 module "athena" {
-  source = "./modules/athena"
+  source = "./athena"
 }
