@@ -5,6 +5,11 @@ resource "aws_s3_bucket" "alb_access_logs_query_results_bucket" {
 resource "aws_athena_workgroup" "alb_access_logs_workgroup" {
   name = "alb-access-logs-workgroup"
   description = "Workgroup for analyzing ALB access logs."
+  configuration {
+    result_configuration {
+      output_location = "s3://${aws_s3_bucket.alb_access_logs_query_results_bucket.id}"
+    }
+  }
 }
 
 resource "aws_athena_database" "alb_access_logs_athena_db" {
