@@ -8,6 +8,6 @@ resource "aws_athena_workgroup" "alb_access_logs_workgroup" {
 }
 
 resource "aws_athena_database" "alb_access_logs_athena_db" {
-  name   = "alb-access-logs-athena-db"
+  name   = "alb_access_logs_athena_db"
   bucket = aws_s3_bucket.alb_access_logs_query_results_bucket.bucket
 }
